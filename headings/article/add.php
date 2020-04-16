@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
 <head>
     <meta charset="UTF-8">
     <title>COVID-19 Infos | Nouvelle publication</title>
@@ -8,6 +11,7 @@
     <meta name="theme-color" content="#1565C0">
     <link rel="shortcut icon" href="<?= asset('../assets/img/logo_temp.png', 'covid'); ?>" type="image/x-icon">
     <meta name=author content="Ecole 241">
+<<<<<<< HEAD
     <meta name=description content="COVID-19 Infos est un système de notifications permettant de suivre l'évolution du coronavirus au Gabon.">
     <meta name=keywords content="COVID-19, COVID-19 Infos, Coronavirus, Coronavirus Gabon, Ecole 241, OkaCode, Infos coronavirus, Alert coronavirus, en direct coronavirus, covid19, gabon actualité covid19, gabon recommandation mesures covid19">
 
@@ -17,6 +21,20 @@
     <meta name=og:url content="https://covid-19-infos.netlify.com" />
     <meta name=og:site_name content="COVID-19 Infos">
     <meta name=og:description content="COVID-19 Infos est un système de notifications permettant de suivre l'évolution du coronavirus au Gabon.">
+=======
+    <meta name=description
+          content="COVID-19 Infos est un système de notifications permettant de suivre l'évolution du coronavirus au Gabon.">
+    <meta name=keywords
+          content="COVID-19, COVID-19 Infos, Coronavirus, Coronavirus Gabon, Ecole 241, OkaCode, Infos coronavirus, Alert coronavirus, en direct coronavirus, covid19, gabon actualité covid19, gabon recommandation mesures covid19">
+
+    <meta name=og:title content="COVID-19 Infos">
+    <meta name=og:type content="website">
+    <meta name=og:image content="<?= asset('../assets/img/logo_temp.png', 'covid'); ?>"/>
+    <meta name=og:url content="https://covid-19-infos.netlify.com"/>
+    <meta name=og:site_name content="COVID-19 Infos">
+    <meta name=og:description
+          content="COVID-19 Infos est un système de notifications permettant de suivre l'évolution du coronavirus au Gabon.">
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
 
     <link rel="stylesheet" href="<?= asset('assets/css/admin.css', 'covid'); ?>">
 
@@ -34,7 +52,10 @@
         gtag('config', 'UA-161415127-1');
     </script>
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
 <body>
     <main>
         <header>
@@ -51,6 +72,7 @@
                 <input type="text" name="auteur" id="pubAuteur" placeholder="Renseignez votre nom (Ex: Jean SAGUE)" required>
             </div>
             <div class="bloc">
+<<<<<<< HEAD
 
                 <fieldset>
                     <legend>Catégorie</legend>
@@ -65,6 +87,8 @@
 
             </div>
             <div class="bloc">
+=======
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
                 <label for="pubTitre">Titre *</label>
                 <input type="text" name="titre" id="pubTitre" placeholder="Donnez un titre à votre publication" required>
             </div>
@@ -72,28 +96,47 @@
                 <label for="pubImage">Image *</label>
                 <input type="url" name="image" id="pubImage" placeholder="Renseignez l'adresse du lien de l'image" required>
             </div>
+<<<<<<< HEAD
             <!--div class="bloc">
                 <label for="pubDescription">Description *</label>
                 <textarea name="description" id="pubDescription" cols="30" rows="10" placeholder="Veuillez décrire en quelques mots le contenu de votre publication..."required></textarea>
             </div-->
+=======
+            <div class="bloc">
+                <label for="pubDescription">Description *</label>
+                <textarea name="description" id="pubDescription" cols="30" rows="10" placeholder="Veuillez décrire en quelques mots le contenu de votre publication..."required></textarea>
+            </div>
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
             <div class="bloc">
                 <fieldset>
                     <legend>Type de publication</legend>
                     <label for="pubTypeTexte"><input type="radio" checked name="type" id="pubTypeTexte" value="TEXTE" data-target="#contentTypeTexte" required>
                         Texte</label>
+<<<<<<< HEAD
                     <!--label for="pubTypeImage"><input type="radio" name="type" id="pubTypeImage" value="IMAGE" data-target="#contentTypeImage" required>
+=======
+                    <label for="pubTypeImage"><input type="radio" name="type" id="pubTypeImage" value="IMAGE" data-target="#contentTypeImage" required>
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
                         Image</label>
                     <label for="pubTypeVideo"><input type="radio" name="type" id="pubTypeVideo" value="VIDEO" data-target="#contentTypeVideo" required>
                         Vidéo</label>
                     <label for="pubTypeURL"><input type="radio" name="type" id="pubTypeURL" value="URL" required data-target="#contentTypeURL"> URL </label>
                     <label for="pubTypeLocalisation"><input type="radio" name="type" id="pubTypeLocalisation" value="LOCALISATION"
+<<<<<<< HEAD
                                                             required data-target="#contentTypeLocalisation"> Localisation</label-->
+=======
+                                                            required data-target="#contentTypeLocalisation"> Localisation</label>
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
                 </fieldset>
             </div>
             <div class="bloc">
                 <div class="pubContent" id="contentTypeTexte">
                     <label for="pubContentTexte">Contenu</label>
+<<<<<<< HEAD
                     <textarea name="contenu" id="pubContentTexte" cols="30" rows="10" placeholder="Soyez inspirez, rédigez quelque chose qui a de la poigne ..." required></textarea>
+=======
+                    <textarea name="contenu" id="pubContentTexte" cols="30" rows="10" placeholder="Veuillez décrire en quelques mots le contenu de votre type de publication..."required></textarea>
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
                 </div>
 
                 <div class="pubContent hide" id="contentTypeImage">
@@ -136,8 +179,17 @@
 
                 <fieldset>
                     <legend>Importance</legend>
+<<<<<<< HEAD
                     <label for="pubImportanceNormal"><input type="radio" checked name="important" id="pubImportanceNormal" value="NORMAL" required> Normal</label>
                     <label for="pubImportanceBreakingNews"><input type="radio" name="important" id="pubImportanceBreakingNews" value="BREAKING-NEWS" required> Breaking news</label>
+=======
+                    <label for="pubImportanceNormal"><input type="radio" checked name="important" id="pubImportanceNormal"
+                                                            value="NORMAL" required> Normal</label>
+                    <label for="pubImportanceFakeNews"><input type="radio" name="important" id="pubImportanceFakeNews" value="FAKE"
+                                                            required> Fake News</label>
+                    <label for="pubImportanceUrgent"><input type="radio" name="important" id="pubImportanceUrgent" value="URGENT"
+                                                            required> Urgent</label>
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
                 </fieldset>
 
             </div>
@@ -149,6 +201,7 @@
 
     </main>
 
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
@@ -164,4 +217,12 @@
 
 </body>
 
+=======
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="<?= asset('assets/js/utils.js', 'covid'); ?>"></script>
+    <script src="<?= asset('assets/js/admin.js', 'covid'); ?>"></script>
+</body>
+>>>>>>> 4262bd9ffaf357297df0fcfd72d0acea1285c9dc
 </html>

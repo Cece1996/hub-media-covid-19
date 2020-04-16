@@ -102,7 +102,6 @@ function rubrique()
     } else {
         $articles = array();
     }
-
     $slider = array();
 
     if (count($articles) > 3) {
@@ -199,7 +198,6 @@ function home()
 
     load_page('index', $data);
 }
-
 
 function add()
 {
