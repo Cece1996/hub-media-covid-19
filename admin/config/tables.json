@@ -1,0 +1,90 @@
+[
+    {
+        "name": "cov_articles",
+        "fields": []
+    },
+    {
+        "name": "cov_logs",
+        "fields": [
+            {
+                "name": "log_date",
+                "type": "datetime",
+                "default": "timestamp"
+            },
+            {
+                "name": "content",
+                "type": "string"
+            }
+        ]
+    },
+    {
+        "name": "cov_stats",
+        "fields": [
+            {
+                "name": "positifs",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "prog_positifs",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "deces",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "prog_deces",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "guerisons",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "prog_guerisons",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "maj_date",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "created_at",
+                "type": "datetime",
+                "default": "timestamp"
+            }
+        ]
+    },
+    {
+        "name": "cov_users",
+        "fields": [
+            {
+                "name": "email",
+                "type": "string"
+            },
+            {
+                "name": "pass",
+                "type": "string",
+                "length": 100
+            },
+            {
+                "name": "name",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "profile",
+                "type": "integer",
+                "length": 11,
+                "default": "1"
+            }
+        ]
+    }
+]

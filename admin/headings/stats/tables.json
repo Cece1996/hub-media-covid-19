@@ -1,0 +1,703 @@
+[
+    {
+        "name": "cov_articles",
+        "fields": [
+            {
+                "name": "auteur",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "contenu",
+                "type": "string"
+            },
+            {
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "name": "image",
+                "type": "string"
+            },
+            {
+                "name": "important",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "pub_date",
+                "type": "datetime",
+                "default": "timestamp"
+            },
+            {
+                "name": "source_lien",
+                "type": "string"
+            },
+            {
+                "name": "source_nom",
+                "type": "string",
+                "length": 100
+            },
+            {
+                "name": "statut",
+                "type": "string",
+                "length": 50,
+                "default": "BROUILLON"
+            },
+            {
+                "name": "titre",
+                "type": "string"
+            },
+            {
+                "name": "type",
+                "type": "string"
+            },
+            {
+                "name": "vues",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "categorie",
+                "type": "string",
+                "length": 50,
+                "null": true
+            },
+            {
+                "name": "likes",
+                "type": "string"
+            },
+            {
+                "name": "dislikes",
+                "type": "string"
+            }
+        ]
+    },
+    {
+        "name": "cov_logs",
+        "fields": [
+            {
+                "name": "log_date",
+                "type": "datetime",
+                "default": "timestamp"
+            },
+            {
+                "name": "content",
+                "type": "string"
+            }
+        ]
+    },
+    {
+        "name": "cov_stats",
+        "fields": [
+            {
+                "name": "positifs",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "prog_positifs",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "deces",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "prog_deces",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "guerisons",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "prog_guerisons",
+                "type": "integer",
+                "length": 11
+            },
+            {
+                "name": "maj_date",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "created_at",
+                "type": "datetime",
+                "default": "timestamp"
+            }
+        ]
+    },
+    {
+        "name": "cov_users",
+        "fields": [
+            {
+                "name": "name",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "email",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "pass",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "profile",
+                "type": "integer",
+                "length": 11,
+                "default": "1"
+            }
+        ]
+    },
+    {
+        "name": "wp_commentmeta",
+        "fields": [
+            {
+                "name": "meta_id",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "comment_id",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "meta_key",
+                "type": "string",
+                "length": 255,
+                "null": true
+            },
+            {
+                "name": "meta_value",
+                "type": "string",
+                "null": true
+            }
+        ]
+    },
+    {
+        "name": "wp_comments",
+        "fields": [
+            {
+                "name": "comment_ID",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "comment_post_ID",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "comment_author",
+                "type": "string"
+            },
+            {
+                "name": "comment_author_email",
+                "type": "string",
+                "length": 100
+            },
+            {
+                "name": "comment_author_url",
+                "type": "string",
+                "length": 200
+            },
+            {
+                "name": "comment_author_IP",
+                "type": "string",
+                "length": 100
+            },
+            {
+                "name": "comment_date",
+                "type": "datetime",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "name": "comment_date_gmt",
+                "type": "datetime",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "name": "comment_content",
+                "type": "string"
+            },
+            {
+                "name": "comment_karma",
+                "type": "integer",
+                "length": 11,
+                "default": "0"
+            },
+            {
+                "name": "comment_approved",
+                "type": "string",
+                "length": 20,
+                "default": "1"
+            },
+            {
+                "name": "comment_agent",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "comment_type",
+                "type": "string",
+                "length": 20
+            },
+            {
+                "name": "comment_parent",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "user_id",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            }
+        ]
+    },
+    {
+        "name": "wp_links",
+        "fields": [
+            {
+                "name": "link_id",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "link_url",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "link_name",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "link_image",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "link_target",
+                "type": "string",
+                "length": 25
+            },
+            {
+                "name": "link_description",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "link_visible",
+                "type": "string",
+                "length": 20,
+                "default": "Y"
+            },
+            {
+                "name": "link_owner",
+                "type": "integer",
+                "length": 20,
+                "default": "1"
+            },
+            {
+                "name": "link_rating",
+                "type": "integer",
+                "length": 11,
+                "default": "0"
+            },
+            {
+                "name": "link_updated",
+                "type": "datetime",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "name": "link_rel",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "link_notes",
+                "type": "string"
+            },
+            {
+                "name": "link_rss",
+                "type": "string",
+                "length": 255
+            }
+        ]
+    },
+    {
+        "name": "wp_options",
+        "fields": [
+            {
+                "name": "option_id",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "option_name",
+                "type": "string",
+                "length": 191
+            },
+            {
+                "name": "option_value",
+                "type": "string"
+            },
+            {
+                "name": "autoload",
+                "type": "string",
+                "length": 20,
+                "default": "yes"
+            }
+        ]
+    },
+    {
+        "name": "wp_postmeta",
+        "fields": [
+            {
+                "name": "meta_id",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "post_id",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "meta_key",
+                "type": "string",
+                "length": 255,
+                "null": true
+            },
+            {
+                "name": "meta_value",
+                "type": "string",
+                "null": true
+            }
+        ]
+    },
+    {
+        "name": "wp_posts",
+        "fields": [
+            {
+                "name": "post_author",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "post_date",
+                "type": "datetime",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "name": "post_date_gmt",
+                "type": "datetime",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "name": "post_content",
+                "type": "string"
+            },
+            {
+                "name": "post_title",
+                "type": "string"
+            },
+            {
+                "name": "post_excerpt",
+                "type": "string"
+            },
+            {
+                "name": "post_status",
+                "type": "string",
+                "length": 20,
+                "default": "publish"
+            },
+            {
+                "name": "comment_status",
+                "type": "string",
+                "length": 20,
+                "default": "open"
+            },
+            {
+                "name": "ping_status",
+                "type": "string",
+                "length": 20,
+                "default": "open"
+            },
+            {
+                "name": "post_password",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "post_name",
+                "type": "string",
+                "length": 200
+            },
+            {
+                "name": "to_ping",
+                "type": "string"
+            },
+            {
+                "name": "pinged",
+                "type": "string"
+            },
+            {
+                "name": "post_modified",
+                "type": "datetime",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "name": "post_modified_gmt",
+                "type": "datetime",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "name": "post_content_filtered",
+                "type": "string"
+            },
+            {
+                "name": "post_parent",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "guid",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "menu_order",
+                "type": "integer",
+                "length": 11,
+                "default": "0"
+            },
+            {
+                "name": "post_type",
+                "type": "string",
+                "length": 20,
+                "default": "post"
+            },
+            {
+                "name": "post_mime_type",
+                "type": "string",
+                "length": 100
+            },
+            {
+                "name": "comment_count",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            }
+        ]
+    },
+    {
+        "name": "wp_term_relationships",
+        "fields": [
+            {
+                "name": "object_id",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "term_taxonomy_id",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "term_order",
+                "type": "integer",
+                "length": 11,
+                "default": "0"
+            }
+        ]
+    },
+    {
+        "name": "wp_term_taxonomy",
+        "fields": [
+            {
+                "name": "term_taxonomy_id",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "term_id",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "taxonomy",
+                "type": "string",
+                "length": 32
+            },
+            {
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "name": "parent",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "count",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            }
+        ]
+    },
+    {
+        "name": "wp_termmeta",
+        "fields": [
+            {
+                "name": "meta_id",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "term_id",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "meta_key",
+                "type": "string",
+                "length": 255,
+                "null": true
+            },
+            {
+                "name": "meta_value",
+                "type": "string",
+                "null": true
+            }
+        ]
+    },
+    {
+        "name": "wp_terms",
+        "fields": [
+            {
+                "name": "term_id",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "name",
+                "type": "string",
+                "length": 200
+            },
+            {
+                "name": "slug",
+                "type": "string",
+                "length": 200
+            },
+            {
+                "name": "term_group",
+                "type": "integer",
+                "length": 10,
+                "default": "0"
+            }
+        ]
+    },
+    {
+        "name": "wp_usermeta",
+        "fields": [
+            {
+                "name": "umeta_id",
+                "type": "integer",
+                "length": 20
+            },
+            {
+                "name": "user_id",
+                "type": "integer",
+                "length": 20,
+                "default": "0"
+            },
+            {
+                "name": "meta_key",
+                "type": "string",
+                "length": 255,
+                "null": true
+            },
+            {
+                "name": "meta_value",
+                "type": "string",
+                "null": true
+            }
+        ]
+    },
+    {
+        "name": "wp_users",
+        "fields": [
+            {
+                "name": "user_login",
+                "type": "string",
+                "length": 60
+            },
+            {
+                "name": "user_pass",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "user_nicename",
+                "type": "string",
+                "length": 50
+            },
+            {
+                "name": "user_email",
+                "type": "string",
+                "length": 100
+            },
+            {
+                "name": "user_url",
+                "type": "string",
+                "length": 100
+            },
+            {
+                "name": "user_registered",
+                "type": "datetime",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "name": "user_activation_key",
+                "type": "string",
+                "length": 255
+            },
+            {
+                "name": "user_status",
+                "type": "integer",
+                "length": 11,
+                "default": "0"
+            },
+            {
+                "name": "display_name",
+                "type": "string",
+                "length": 250
+            }
+        ]
+    }
+]

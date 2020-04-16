@@ -1,0 +1,304 @@
+{
+    "name": "HUB MEDIA - COVID-19",
+    "description": "HUB MÉDIA - COVID-19, est une plateforme de centralisation des informations autour du COVID-19 permettant de suivre l'évolution du coronavirus au Gabon.",
+    "version": "1.00.04",
+    "author": {
+        "name": "Ecole 241",
+        "website": "ecole241.org",
+        "email": "contact@ecole241.org"
+    },
+    "owner": "Ecole 241",
+    "theme": "inspinia",
+    "logo": "img/logo.png",
+    "root_url": "http://localhost/covid/admin",
+    "prod_url": "https://covid19.ecole241.org/admin",
+    "home_route": "publication-home",
+    "headings": [
+        {
+            "name": "user",
+            "title": "Utilisateurs",
+            "male": true,
+            "singular": "utilisateur",
+            "plural": "utilisateurs",
+            "table": "cov_users",
+            "dir": "user",
+            "icon": "users",
+            "route": "user-home",
+            "route-add": "user-add",
+            "deny": {
+                "session": "p",
+                "values": [
+                    1,
+                    2
+                ]
+            },
+            "listing": {
+                "title": "Tous les utilisateurs",
+                "subtitle": "Listing of all users of database.",
+                "columns": {
+                    "name": "Nom",
+                    "email": "Adresse e-mail",
+                    "profile": {
+                        "label": "Profil",
+                        "matching": {
+                            "1": "Standard",
+                            "2": "Rédacteur",
+                            "3": "Chef de rédaction",
+                            "4": "Administrateur",
+                            "99": "Super administrateur"
+                        }
+                    }
+                },
+                "actions": [
+                    {
+                        "type": "edit",
+                        "text": "Modifier",
+                        "icon": "edit",
+                        "color": "success",
+                        "handler": "edit",
+                        "deny": {
+                            "session": "p",
+                            "values": [
+                                1,
+                                3
+                            ]
+                        }
+                    },
+                    {
+                        "type": "delete",
+                        "text": "Supprimer",
+                        "icon": "trash",
+                        "color": "danger",
+                        "handler": "delete",
+                        "deny": {
+                            "session": "p",
+                            "values": [
+                                1,
+                                2,
+                                3
+                            ]
+                        }
+                    }
+                ]
+            },
+            "add": {
+                "title": "Ajout d'un utilisateur"
+            },
+            "edit": {
+                "title": "Modification des informations d'un utilisateur"
+            },
+            "views": []
+        },
+        {
+            "name": "publication",
+            "route": "publication-home",
+            "dir": "publication",
+            "title": "Articles",
+            "table": "cov_articles",
+            "male": true,
+            "singular": "article",
+            "plural": "articles",
+            "icon": "book",
+            "route-add": "article-add",
+            "listing": {
+                "title": "Tous les articles",
+                "subtitle": "Listing of all users of database.",
+                "columns": {
+                    "id": "#",
+                    "titre": {
+                        "label": "Titre",
+                        "max": 50
+                    },
+                    "pub_date": {
+                        "label": "Date de publication",
+                        "format": "d M Y à H:i"
+                    },
+                    "auteur": "Auteur",
+                    "categorie": {
+                        "label": "Catégorie",
+                        "matching": {
+                            "1": "Administrateur",
+                            "2": "Sage Femme",
+                            "3": "Major",
+                            "4": "Agent de mairie"
+                        }
+                    }
+                },
+                "actions": [
+                    {
+                        "type": "edit",
+                        "text": "Modifier",
+                        "icon": "edit",
+                        "color": "success",
+                        "handler": "edit",
+                        "deny": {
+                            "session": "p",
+                            "values": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "delete",
+                        "text": "Supprimer",
+                        "icon": "trash",
+                        "color": "danger",
+                        "handler": "delete",
+                        "deny": {
+                            "session": "p",
+                            "values": [
+                                1,
+                                2,
+                                3
+                            ]
+                        }
+                    }
+                ]
+            },
+            "add": {
+                "title": "Ajout d'un utilisateur",
+                "deny": {
+                    "session": "p",
+                    "values": [
+                        1
+                    ]
+                }
+            },
+            "edit": {
+                "title": "Modification des informations d'un utilisateur"
+            },
+            "views": []
+        },
+        {
+            "name": "stats",
+            "route": "stats-home",
+            "dir": "stats",
+            "title": "Statistiques",
+            "table": "cov_stats",
+            "male": false,
+            "singular": "statistique",
+            "plural": "statistiques",
+            "icon": "pie-chart",
+            "route-add": "stats-add",
+            "deny": {
+                "session": "p",
+                "values": [
+                    2
+                ]
+            },
+            "listing": {
+                "title": "Tous les articles",
+                "subtitle": "Listing of all users of database.",
+                "columns": {
+                    "positifs": "Cas positifs",
+                    "prog_positifs": "Nouveaux cas",
+                    "guerisons": "Nombre de guérisons",
+                    "deces": "Nombre de décès",
+                    "maj_date": "Date de mise à jour"
+                },
+                "actions": [
+                    {
+                        "type": "edit",
+                        "text": "Modifier",
+                        "icon": "edit",
+                        "color": "success",
+                        "handler": "edit",
+                        "deny": {
+                            "session": "p",
+                            "values": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "delete",
+                        "text": "Supprimer",
+                        "icon": "trash",
+                        "color": "danger",
+                        "handler": "delete",
+                        "deny": {
+                            "session": "p",
+                            "values": [
+                                1,
+                                2,
+                                3
+                            ]
+                        }
+                    }
+                ]
+            },
+            "add": {
+                "title": "Ajout d'une statistique",
+                "deny": {
+                    "session": "p",
+                    "values": [
+                        1
+                    ]
+                }
+            },
+            "edit": {
+                "title": "Modification des informations d'une statistique"
+            },
+            "views": []
+        },
+        {
+            "name": "setup",
+            "title": "Base de données",
+            "dir": "setup",
+            "show": true,
+            "icon": "database",
+            "route": "setup-home",
+            "deny": {
+                "session": "p",
+                "values": [
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "name": "config",
+            "title": "Configuration",
+            "dir": "config",
+            "icon": "cogs",
+            "route": "config-home",
+            "deny": {
+                "session": "p",
+                "values": [
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "name": "log",
+            "title": "Logs",
+            "dir": "log",
+            "icon": "file",
+            "table": "cov_logs",
+            "male": true,
+            "singular": "log",
+            "plural": "logs",
+            "route": "log-home",
+            "deny": {
+                "session": "p",
+                "values": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            "listing": {
+                "title": "Tous les logs",
+                "columns": {
+                    "log_date": "Date",
+                    "content": "Information"
+                }
+            }
+        }
+    ]
+}
